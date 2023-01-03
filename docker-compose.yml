@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  pocketbase:
+    build:
+      context: ./pocketbase
+    ports:
+      - "8090:8090"
+      - "443:443"
+    volumes:
+      - pb_volume:/pb/pb_data
+volumes:
+  pb_volume:
